@@ -145,9 +145,15 @@ button {
 }
 
 #histories {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 30px;
+  row-gap: 20px;
+  width: 100%;
+  
 }
 
 .card {
@@ -184,8 +190,8 @@ button {
   top: 0;
 }
 
-/* responsive for mobile devices  */
-@media only screen and (max-width: 700px) {
+ /* pre code with task file  */
+/* @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
@@ -193,7 +199,18 @@ button {
   .card {
     flex-direction: column;
   }
-}
+}  */
 
-/* responsive for desktop devices  */
+/* responsive for mobile devices  */
+@media only screen and (max-width: 700px) {
+  .box-container {
+    padding: 0 20px;
+    width: 100%;
+  }
+  #histories {
+    display: flex;
+    flex-direction: column;
+  }
+};
+
 
